@@ -1,0 +1,61 @@
+body{
+    width: 100%;
+    height: 99vh;
+    background-image: url("./images/paper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+    background: black;
+    color: aliceblue;
+    padding: 100px;
+    border-radius: 16px;
+}
+
+div{
+    display: flex;
+}
+
+span{
+    font-size: larger;
+}
+
+input{
+    font-size: large;
+    border: none;
+    outline: none;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+textarea{
+    font-size: large;
+    border: none;
+    outline: none;
+    padding: 6px;
+    border-radius: 8px;
+    color: red;
+}
+
+textarea::placeholder{
+    color: red;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    cursor: pointer;
+    width: 50%;
+}

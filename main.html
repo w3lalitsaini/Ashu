@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Welcome Ashmita</title>
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="cursor cursor2"></div>
+
+    <div id="quote-toast" class="quote-toast hidden"></div>
+
+    <div class="glow-lights left"></div>
+    <div class="glow-lights right"></div>
+    <div class="glow-lights top"></div>
+    <div class="glow-lights bottom"></div>
+
+    <!-- Music Player -->
+    <div class="music-toggle">
+      <button id="musicToggle">🔊</button>
+      <audio id="bgMusic" loop>
+        <source
+          src="./assets/audio/Bulleya Sultan 320 Kbps.mp3"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <header>
+      <div class="logo"><a href="">Chikku 💕</a></div>
+
+      <nav class="top-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-us" class="nav-link">About Us</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#history" class="nav-link">Journey</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </nav>
+      <a onclick="logout()" class="subscribe">Logout</a>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="center">
+        <h1 class="typewriter">I Love You More Every Single Day...</h1>
+        <p>
+          Discover the beautiful journey of us — every smile, every moment, and
+          every heartbeat 💖
+        </p>
+        <button class="start-btn">Start Exploring</button>
+      </div>
+
+      <div class="cards">
+        <div class="card" data-sr-id>
+          <h3>🌸 First Glance</h3>
+          <p>
+            When I saw you for the first time, the world paused. Everything else
+            faded away.
+          </p>
+        </div>
+        <div class="card tilted" data-sr-id>
+          <h3>💬 Sweet Talks</h3>
+          <p>
+            Every word you say is like music. You don’t even know how much I
+            love hearing you.
+          </p>
+        </div>
+        <div class="card tilted1" data-sr-id>
+          <h3>🌟 Dreams Together</h3>
+          <p>
+            From silly texts to dreaming about forever — it's all perfect with
+            you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confetti Button -->
+    <!-- <div class="confetti-wrap">
+      <button onclick="fireConfetti()">🎉 Click Me</button>
+    </div> -->
+
+    <!-- Heart Particle Background -->
+    <!-- <canvas id="heartCanvas"></canvas> -->
+
+    <div id="countdown">
+      ❤️ Days since we met: <span id="daysCount"></span> ❤️
+    </div>
+
+    <section class="clients">
+      <h1>Our Recent Clients & Partners</h1>
+      <div class="client-box">
+        <div class="client">
+          <div class="client-img">
+            <img src="./assets/images/kittu.jpg" alt="kittu" />
+          </div>
+          <p>Kittu</p>
+        </div>
+        <div class="client">
+          <div class="client-img">
+            <img src="./assets/images/person.png" alt="Himanshu" />
+          </div>
+          <p>Himanshu</p>
+        </div>
+        <div class="client">
+          <div class="client-img">
+            <img src="./assets/images/usha.jpg" alt="usha" />
+          </div>
+          <p>Usha</p>
+        </div>
+        <div class="client">
+          <div class="client-img">
+            <img src="./assets/images/yogesh.jpg" alt="Yogesh" />
+          </div>
+          <p>Yogesh</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-us" id="about-us">
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>About Us</h2>
+        <p id="typewriter"></p>
+      </div>
+      <div class="overlay-1"></div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="section-title">
+        <h2>Our Special Projects</h2>
+        <p>A glimpse into the things I've created with love 💖</p>
+      </div>
+
+      <div class="project-grid">
+        <!-- First 5 visible -->
+        <div
+          class="project-card"
+          onclick="window.location.href='./projects/Gallery/index.html'"
+          ;
+        >
+          <img src="./assets/images/gellary.png" alt="Memory Gallery" />
+          <h3>Memory Gallery</h3>
+          <p>
+            A romantic web gallery filled with your favorite memories and
+            photos.
+          </p>
+        </div>
+
+        <div
+          class="project-card"
+          onclick="window.location.href='./projects/Ashu/index.html'"
+          ;
+        >
+          <img src="./assets/images/first-pro.png" alt="Project 1" />
+          <h3>"A Page from My Heart"</h3>
+          <p>
+            "A romantic web diary of our memories, your beauty, and unspoken
+            love."
+          </p>
+        </div>
+      </div>
+
+      <div class="extra-projects hidden">
+        <h1>Sare projects aaj hi dekhne hai kya</h1>
+      </div>
+
+      <div class="btn-wrapper">
+        <button id="view-more-btn">View More</button>
+      </div>
+      <!-- Button placed outside grid -->
+    </section>
+
+    <section id="history" class="history-section">
+      <div class="overlay-j top"></div>
+      <div class="overlay-j bottom"></div>
+
+      <h2>Our Journey</h2>
+
+      <div class="journey">
+        <!-- Timeline Container -->
+        <div class="timeline-container">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">June 2024</div>
+              <div class="timeline-content">First time we talked ❤️</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">August 2024</div>
+              <div class="timeline-content">You wish me Happy birthday 🎂</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">11 november 2024</div>
+              <div class="timeline-content">I wish you Happy birthday 🎂</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Decemeber 2024</div>
+              <div class="timeline-content">First video call 📞</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">5 December 2024</div>
+              <div class="timeline-content">Proposal ❤️</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">16 December 2025</div>
+              <div class="timeline-content">First Date 🕯️</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">16 December 2025</div>
+              <div class="timeline-content">Chocolates 🍫</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">December 2024</div>
+              <div class="timeline-content">You made me smile 😘</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">January 2024</div>
+              <div class="timeline-content">Late night chat 😴</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">21 January 2025</div>
+              <div class="timeline-content">First Hug 🫂</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">25 Feb 2025</div>
+              <div class="timeline-content">Gift 🎁</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">25 feb 2025</div>
+              <div class="timeline-content">See you in Sarre 🥻</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">15 March 2025</div>
+              <div class="timeline-content">Our first kiss 😘</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">16 March 2025</div>
+              <div class="timeline-content">Miss you Badly 🥺</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">May 2025</div>
+              <div class="timeline-content">Late night call ❤️</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">June 2025</div>
+              <div class="timeline-content">Our first fight 😅</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">16 July 2025</div>
+              <div class="timeline-content">first Earing 📿</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">16 July 2025</div>
+              <div class="timeline-content">first Rose 🌹</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Much More</div>
+              <div class="timeline-content">Yaad aayega To add krenge 🤭</div>
+            </div>
+
+            <!-- Add more as needed -->
+          </div>
+
+          <!-- Overlay gradients -->
+        </div>
+
+        <div class="timeline-container">
+          <div class="image-container">
+            <img src="./assets/images/1.jpg" alt="" />
+            <img src="./assets/images/2.jpg" alt="" />
+            <img src="./assets/images/3.jpg" alt="" />
+            <img src="./assets/images/4.jpg" alt="" />
+            <img src="./assets/images/5.jpg" alt="" />
+            <img src="./assets/images/6.jpg" alt="" />
+            <img src="./assets/images/7.jpg" alt="" />
+            <img src="./assets/images/21.jpg" alt="" />
+            <img src="./assets/images/22.jpg" alt="" />
+            <img src="./assets/images/23.jpg" alt="" />
+            <img src="./assets/images/24.jpg" alt="" />
+            <img src="./assets/images/25.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <form action="https://formspree.io/f/mrbkrrpk" method="post" class="love-message-section">
+        <h2 class="contact-title">💌 Let's Connect</h2>
+        <textarea
+          id="loveMessage"
+          placeholder="Write a message from your heart..."
+          name="mesaage"
+        ></textarea>
+        <button id="sendLove" type="submit"><span>Send ✈️</span></button>
+      </form>
+
+      <p class="contact-note">
+        Or find us on Instagram:
+        <a href="https://instagram.com/w3lalitsaini" target="_blank"
+          >@w3lalitsaini</a
+        >
+      </p>
+
+      <div id="loveAnimation" class="hidden">
+        <p>Message sent with love 💖</p>
+      </div>
+      <canvas id="heartCanvas"></canvas>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>
+          Made with ❤️ and countless memories by <strong>Lalit & Ashu</strong>
+        </p>
+        <p>Forever & Always ✨</p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/quoteToast.js"></script>
+    <script src="./assets/js/cursor.js"></script>
+    <script src="./assets/js/countdown.js"></script>
+    <script src="./assets/js/about.js"></script>
+    <script src="./assets/js/Project.js"></script>
+    <script src="./assets/js/history.js"></script>
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/fireConfetti.js"></script>
+    <script src="./assets/js/heartparticals.js"></script>
+  </body>
+</html>

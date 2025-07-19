@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 10rem;
+  background-image: url("./images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.paper {
+  background-image: url("./images/paper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 100px;
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+}
+
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+img {
+  max-height: 400px;
+  width: 100%;
+  user-select: none;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url("https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+p {
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(184, 89, 176);
+  opacity: 1;
+  user-select: none;
+  filter: drop-shadow(1px 1.5px 1px rgba(61, 49, 150, 0.9));
+  padding: 0;
+  margin: 0;
+  line-height: 40px;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: aliceblue;
+  background: red;
+  padding: 10px 0;
+  font-weight: 600;
+  font-family: "Archivo Narrow", sans-serif;
+  border-radius: 16px;
+}
