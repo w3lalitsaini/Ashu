@@ -7,6 +7,22 @@ function logout() {
   window.location.href = "index.html";
 }
 
+// Toggle nav menu
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("show");
+    });
+  });
+});
+
 window.addEventListener("scroll", () => {
   const nav = document.querySelector("header, .top-nav");
   if (window.scrollY > 200) {
@@ -41,29 +57,35 @@ ScrollReveal().reveal("[data-sr-id]", {
 });
 
 const typewriter = document.querySelector(".typewriter");
-const text = typewriter.textContent;
-let i = 0;
-typewriter.textContent = "";
-const type = () => {
-  if (i < text.length) {
-    typewriter.textContent += text.charAt(i);
-    i++;
+
+// Array of quotes/messages
+const messages = [
+  "I Love You More Every Single Day...🌹",
+  "You're the reason my heart beats with joy 💖",
+  "With you, every moment becomes magical ✨"
+];
+
+let messageIndex = 0;
+let charIndex = 0;
+
+function type() {
+  const currentMessage = messages[messageIndex];
+  
+  if (charIndex < currentMessage.length) {
+    typewriter.textContent += currentMessage.charAt(charIndex);
+    charIndex++;
     setTimeout(type, 70);
+  } else {
+    // After complete typing, wait 15 seconds, then type the next message
+    setTimeout(() => {
+      messageIndex = (messageIndex + 1) % messages.length; // Loop back to first
+      charIndex = 0;
+      typewriter.textContent = "";
+      type();
+    }, 10000); // 15 seconds
   }
-};
+}
+
+// Start typing
 type();
 
-const musicToggle = document.getElementById("musicToggle");
-const bgMusic = document.getElementById("bgMusic");
-let isPlaying = false;
-
-musicToggle.addEventListener("click", () => {
-  if (isPlaying) {
-    bgMusic.pause();
-    musicToggle.textContent = "🔈 ▶️";
-  } else {
-    bgMusic.play();
-    musicToggle.textContent = "🔊 ⏸️";
-  }
-  isPlaying = !isPlaying;
-});

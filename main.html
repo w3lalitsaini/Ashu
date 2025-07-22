@@ -24,30 +24,28 @@
     <div class="music-toggle">
       <button id="musicToggle">🔊</button>
       <audio id="bgMusic" loop>
-        <source
-          src="./assets/audio/Bulleya Sultan 320 Kbps.mp3"
-          type="audio/mpeg"
-        />
+        <source src="./assets/audio/Bukkeya.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </div>
 
     <header>
       <div class="logo"><a href="">Chikku 💕</a></div>
+      <button class="hamburger" id="hamburger">&#9776;</button>
 
-      <nav class="top-nav">
+      <nav class="top-nav" id="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about-us" class="nav-link">About Us</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#history" class="nav-link">Journey</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a onclick="logout()" class="subscribe">Logout</a></li>
       </nav>
-      <a onclick="logout()" class="subscribe">Logout</a>
     </header>
 
     <section class="hero" id="home">
       <div class="center">
-        <h1 class="typewriter">I Love You More Every Single Day...</h1>
+        <h1 class="typewriter"></h1>
         <p>
           Discover the beautiful journey of us — every smile, every moment, and
           every heartbeat 💖
@@ -262,11 +260,7 @@
               <div class="timeline-date">Much More</div>
               <div class="timeline-content">Yaad aayega To add krenge 🤭</div>
             </div>
-
-            <!-- Add more as needed -->
           </div>
-
-          <!-- Overlay gradients -->
         </div>
 
         <div class="timeline-container">
@@ -289,7 +283,11 @@
     </section>
 
     <section class="contact" id="contact">
-      <form action="https://formspree.io/f/mrbkrrpk" method="post" class="love-message-section">
+      <form
+        action="https://formspree.io/f/mrbkrrpk"
+        method="post"
+        class="love-message-section"
+      >
         <h2 class="contact-title">💌 Let's Connect</h2>
         <textarea
           id="loveMessage"
@@ -324,6 +322,7 @@
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/quoteToast.js"></script>
     <script src="./assets/js/cursor.js"></script>
+    <script src="./assets/js/music.js"></script>
     <script src="./assets/js/countdown.js"></script>
     <script src="./assets/js/about.js"></script>
     <script src="./assets/js/Project.js"></script>

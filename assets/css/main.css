@@ -110,7 +110,7 @@ body {
   position: fixed;
   top: 10px;
   right: 10px;
-  z-index: 999;
+  z-index: 1001;
 }
 .music-toggle button {
   background: transparent;
@@ -174,6 +174,16 @@ header.sticky {
   animation: pulse 1s ease-in-out;
 }
 
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 999;
+}
+
 .top-nav {
   display: flex;
   align-items: center;
@@ -213,7 +223,7 @@ header.sticky {
   padding: 40px;
   text-align: center;
   position: relative;
-  height: 90vh;
+  /* height: 90vh; */
 }
 
 .center h1 {
@@ -221,6 +231,7 @@ header.sticky {
   background: linear-gradient(to right, #f96cb3, #f43dfa, #55ffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding: 0 150px;
 }
 
 .center p {
@@ -354,7 +365,7 @@ header.sticky {
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.8;
+  opacity: 0.5;
   top: 0;
   width: 50%;
   height: 100%;
@@ -788,4 +799,128 @@ textarea {
   width: 100vw;
   height: 100vh;
   z-index: -1;
+}
+
+/* 🌐 Responsive Adjustments */
+@media (max-width: 768px) {
+
+  .music-toggle{
+    top: 70px;
+  }
+
+.music-toggle button {
+  padding: 0;
+}
+  .hamburger {
+    display: block;
+  }
+
+  .top-nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 998;
+    font-size: 16px;
+  }
+
+  .top-nav.show {
+    display: flex;
+  }
+
+  .top-nav li {
+    margin: 10px 0;
+  }
+
+  .subscribe {
+    margin-top: 10px;
+  }
+
+  .hero {
+    padding: 20px;
+    height: auto;
+  }
+
+  .center h1 {
+    font-size: 2.5rem;
+    padding: 0;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .clients h1 {
+    font-size: 40px;
+    padding: 20px;
+  }
+
+  .client-box {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+    padding-left: 100px;
+  }
+
+  .project-grid,
+  .extra-projects {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .overlay {
+    background-position: left;
+  }
+
+  .about-us{
+    min-height: 100%;
+  }
+
+  .about-us .overlay-1 {
+    background-position: left;
+    right: 0;
+    width: 100%;
+    background-size: cover;
+    opacity: 0.9;
+  }
+
+  .timeline-container {
+    width: 95%;
+    margin: auto;
+    height: 80vh;
+    display: flex;
+  }
+
+  .image-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .journey {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .about-us .overlay-1 {
+    background-position: center;
+    background-size: contain;
+    opacity: 0.4;
+  }
+
+  .image-container img {
+    width: 90%;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
 }
